@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sales Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Sales Tracker</h1>
+
+  <form id="transactionForm">
+    <select id="paymentType" required>
+      <option value="GCash">GCash</option>
+      <option value="Cash">Cash</option>
+    </select>
+    <input type="number" id="perBoxPrice" placeholder="Per Box Price" required />
+    <input type="number" id="pieces" placeholder="Pieces" required />
+    <button type="submit">Add</button>
+  </form>
+
+  <h2>Summary</h2>
+  <p><strong>Total Peso:</strong> <span id="totalPeso">0</span></p>
+  <p><strong>Total Pieces:</strong> <span id="totalPieces">0</span></p>
+
+  <h2>Transactions</h2>
+  <table>
+    <thead>
+      <tr><th>Type</th><th>Price</th><th>Pieces</th><th>Total</th><th>Date</th></tr>
+    </thead>
+    <tbody id="transactionTable"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
